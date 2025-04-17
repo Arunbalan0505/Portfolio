@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(rockpaperbackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.left,.right{
+    box-shadow: 10px 15px 18px;
+}
+.game-body{
+    border: 2px solid;
+    height: 500px;
+    border-radius: 10px;
+}
+.game-body button{
+   border: none;
+}
+
+.game-body img:hover{
+    box-shadow: 6px 10px 8px;
+    border-radius: 50%;
+    border: 5px solid rgb(0, 217, 255);
+}
+.msg{
+    background-color: #000;
+   border-radius: 10px;
+}
+.footer{
+    display: inline;
+
+}
+.bttn{
+    width: 5rem;
+    background-color: hsl(0,0%,65%);
+}
+.bttn:hover{
+    background-color: hsl(0,0%,55%);
+}
+.guides{
+    background-color: rgb(147, 226, 226);
+    border-radius: 10px;
+    box-shadow: 6px 10px 8px;
+}

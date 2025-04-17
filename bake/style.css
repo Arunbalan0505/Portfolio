@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(38, 24, 88);
+}
+.second{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+   
+}
+.third{
+    display: block;
+   
+    background-color: rgb(71, 71, 71);
+    position: relative;
+    height: 800px;
+}
+.third .right{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    
+}
+.third .right img, .third .left img{
+    position: relative;
+    border-radius: 10px;
+    border: 2px solid greenyellow;
+    z-index: 1;
+}
+.content{
+    text-align: center;
+    line-height: 32px;
+}
+.content-box{
+    position: absolute;
+    background-color: aqua;
+    height: 450px;
+    width: 750px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: transparent ;
+    border: 2px solid rgb(1, 255, 22);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 10px 12px 6px;
+    z-index: 2;
+}
+.left::before{
+    content: 'a';
+    position: absolute;
+    background-color: rgb(255, 242, 1);
+    inset: 50px 140px;
+    filter: blur(5px);
+    
+}
+.left::after{
+    content: 'a';
+    position: absolute;
+    background-color: rgb(71, 71, 71);
+    inset: 55px 145px;
+    border-radius: 10px;
+   z-index: 0;
+}
+
+.four{
+    max-width: 1000px;
+    margin-inline:auto;
+}
+.images img{
+    width: 100%;
+    display: block;
+    aspect-ratio: 1/1.5;
+    object-fit: cover;
+    border-radius: 4px;
+    
+ }
+.wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+    transform-style: preserve-3d ;
+}
+.images{
+    flex: 1;
+    aspect-ratio: 1/1.5;
+   
+    cursor: pointer;
+    -webkit-box-reflect: below 4px linear-gradient(transparent, rgba(0,0,0,0.15));
+    transition: 0.4s;
+
+}
+.images:hover{
+    transform: scale(1.2);
+}
+.wrapper:hover > :not(:hover){
+    margin-inline: -1rem;
+    transform: perspective(400px) rotateY(30deg) scale(0.8);
+}
+
+.images:hover ~ .images{
+    transform: perspective(400px) rotateY(-30deg) scale(0.8);
+}
+
+

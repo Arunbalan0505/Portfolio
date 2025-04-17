@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor Game</title>
+</head>
+<body>
+    <center>
+        <div>
+    <h1>Game Starts</h1>
+    <h1>You VS Computer</h1>
+    <img src="rockpaperscissor.png" alt="loading" height="200px" width="100%">
+</div>
+    <hr>
+    <h2>🪨ROCK 📜PAPER ✂️SCISSOR</h2>
+<h2>Click Button</h2>
+
+<div name="btn">
+    <button value="3" id="value1" onclick="btn1()">Rock</button>
+    <button value="6" id="value2" onclick="btn2()">Paper</button>
+    <button value="10" id="value3" onclick="btn3()">Scissor</button>
+</div>
+    <p id="result">You Won!</p>
+<style>
+    body{
+        background-color: antiquewhite;
+    }
+    button{
+        background-color: bisque;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+</style>
+
+
+<script>
+    function btn()
+    {
+       var a=Math.random()
+       var b=Math.floor(a*10)+1
+       console.log(b)
+       var result=document.getElementById("result")
+
+       var value1=document.getElementById("value1")
+       var value2=document.getElementById("value2")
+       var value3=document.getElementById("value3")
+
+    
+        console.log(value1.value)
+        function btn1()
+        {
+       if(b<=value1.value)
+       {
+
+        result.textContent="It's Rock - YOU WON"
+       }
+       else
+       {
+         result.textContent="YOU LOSS - COMPUTER WINS"
+       }
+    }
+    function btn2()
+    {
+        if(b>value1.value && b<=value2.value)
+       {
+        result.textContent="It's Paper - YOU WON"
+       }
+       else 
+       {
+        result.textContent="YOU LOSS - COMPUTER WINS"
+       }
+    }
+    function btn3()
+    {
+       if(b>value2.value && b<=value3.value)
+       {
+        result.textContent="It's Scissor - YOU WON"
+       }
+       else
+       {
+        result.textContent="YOU LOSS - COMPUTER WINS"
+       }
+    }
+    }
+    
+
+</script>
+</center>
+</body>
+</html>
